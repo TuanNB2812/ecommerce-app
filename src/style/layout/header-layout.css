@@ -1,0 +1,8 @@
+.header-sheet-content button {
+    outline: none;
+    box-shadow: none;
+}
+
+.header-sheet-content button:hover {
+    cursor: pointer;
+}
