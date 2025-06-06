@@ -10,7 +10,7 @@ export default function Header() {
                 <div className="flex justify-center items-center py-3">
                 <span className="text-sm sm:text-base">
                     Đại hạ giá 50% tất cả sản phẩm trong tháng hè này!
-                    <Link href="/" className="font-bold ml-2">Mua sắm ngay</Link>
+                    <Link href="/" prefetch={false} className="font-bold ml-2">Mua sắm ngay</Link>
                 </span>
                 </div>
             </div>

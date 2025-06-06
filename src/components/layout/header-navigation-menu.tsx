@@ -46,6 +46,7 @@ export default function HeaderNavigationMenu() {
                     <Link
                         key={href}
                         href={href}
+                        prefetch={false}
                         className="hover:underline transition-colors"
                     >
                         <span>{label}</span>
@@ -69,6 +70,7 @@ export default function HeaderNavigationMenu() {
                                 <Link
                                     key={href}
                                     href={href}
+                                    prefetch={false}
                                     onClick={() => setOpen(false)}
                                     className={clsx("text-base hover:text-primary ml-4 flex items-center", index != 0 && "mt-4")}
                                 >
