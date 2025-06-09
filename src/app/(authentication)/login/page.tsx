@@ -29,7 +29,7 @@ export default function Login() {
             <div className="grid grid-cols-12">
                 <h1 className="col-span-6 text-3xl font-bold">Đăng nhập</h1>
                 <div className="col-span-6 text-sm font-bold flex justify-end">
-                    <Link href="/register" prefetch={false} className="flex items-center gap-2 text-primary cursor-pointer">
+                    <Link href="/register" className="flex items-center gap-2 text-primary cursor-pointer">
                         Đăng ký
                         <CircleArrowRight size={17}/>
                     </Link>
