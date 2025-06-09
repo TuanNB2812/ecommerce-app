@@ -1,9 +1,11 @@
-import {Button} from "@/components/ui/button";
+import Category from "@/components/home/category";
+import HomeComp from "@/components/home/home";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <Button>Click me</Button>
-    </div>
-  );
+    return (
+        <div className="w-full min-h-screen md:px-10 lg:px-15 mb-10">
+            <HomeComp></HomeComp>
+            <Category></Category>
+        </div>
+    );
 }

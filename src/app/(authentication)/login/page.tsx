@@ -81,9 +81,7 @@ export default function Login() {
                         <Button type="submit" className="w-1/3 py-5">
                             Đăng nhập
                         </Button>
-                        <a href="https://example.com" className="w-1/3 hover:underline content-center text-right">
-                            Quên mật khẩu?
-                        </a>
+                        <Link href="/" className="w-1/3 hover:underline content-center text-right">Quên mật khẩu?</Link>
                     </div>
                 </form>
             </Form>

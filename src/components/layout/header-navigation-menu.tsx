@@ -2,25 +2,17 @@
 
 import {useEffect, useState} from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import {
-    Sheet,
-    SheetClose,
-    SheetContent,
-    SheetFooter,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger
-} from "@/components/ui/sheet";
+import {Button} from "@/components/ui/button";
+import {Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet";
 import {Contact, House, Info, Menu, UserPen} from "lucide-react";
 import {VisuallyHidden} from "@radix-ui/react-visually-hidden";
 import {clsx} from "clsx";
 
 const navItems = [
-    { href: "/", label: "Trang chủ", icon: House },
-    { href: "/information", label: "Thông tin", icon: Info },
-    { href: "/contact", label: "Liên hệ", icon: Contact },
-    { href: "/register", label: "Đăng ký", icon: UserPen },
+    {href: "/", label: "Trang chủ", icon: House},
+    {href: "/information", label: "Thông tin", icon: Info},
+    {href: "/contact", label: "Liên hệ", icon: Contact},
+    {href: "/register", label: "Đăng ký", icon: UserPen},
 ];
 
 export default function HeaderNavigationMenu() {

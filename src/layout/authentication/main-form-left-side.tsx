@@ -8,7 +8,7 @@ export default function MainFormLeftSide() {
                 src="/images/login-register.jpg"
                 alt="Ảnh mặc định trang đăng nhập và đăng ký"
                 fill
-                sizes="(max-width: 600px) 100vw, 50vw"
+                sizes="(max-width: 1280) 50vw, 75vw"
                 priority
                 quality={100}
             />
