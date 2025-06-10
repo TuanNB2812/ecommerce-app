@@ -1,10 +1,10 @@
-import CategorySwiper from "@/components/home/category-swiper";
-import HomeCard from "@/components/layout/home-card";
+import CategorySwiper from "@/components/home/category/category-swiper";
+import Entry from "@/components/home/common/entry";
 
 export default function Category() {
     return (
         <div className="mt-20">
-            <HomeCard leftHeaderTitle={"Danh mục"} body={<CategorySwiper></CategorySwiper>} />
+            <Entry leftHeaderTitle={"Danh mục"} body={<CategorySwiper></CategorySwiper>} />
         </div>
     );
 }

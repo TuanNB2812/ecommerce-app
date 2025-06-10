@@ -1,12 +1,13 @@
 import {CircleArrowRight} from "lucide-react";
-import HomeCard from "@/components/layout/home-card";
+import Entry from "@/components/home/common/entry";
+import ItemList from "@/components/home/flashsale/item-list";
 
 export default function FlashSale() {
     return (
         <div className="mt-20">
-            <HomeCard srcImageLeftHeader={"/svg/fire.svg"} leftHeaderTitle={"Flash Sale"}
-                      rightHeaderTitle={"Xem tất cả"} iconRightHeader={<CircleArrowRight size={17}/>}
-                      isRightHeaderLink={true} hrefRightHeader={"/"} body={<div></div>}/>
+            <Entry srcImageLeftHeader={"/svg/fire.svg"} leftHeaderTitle={"Flash Sale"}
+                   rightHeaderTitle={"Xem tất cả"} iconRightHeader={<CircleArrowRight size={17}/>}
+                   isRightHeaderLink={true} hrefRightHeader={"/"} body={<ItemList></ItemList>}/>
         </div>
     );
 }

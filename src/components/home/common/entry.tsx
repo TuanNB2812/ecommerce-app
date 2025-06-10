@@ -12,7 +12,7 @@ type HomeCardProps = {
     body: React.ReactNode;
 };
 
-export default function HomeCard({
+export default function Entry({
                                      srcImageLeftHeader,
                                      leftHeaderTitle,
                                      rightHeaderTitle,

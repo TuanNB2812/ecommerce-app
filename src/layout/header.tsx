@@ -19,7 +19,7 @@ export default function Header() {
                 <div className="border-t w-full border-gray-400 opacity-50"></div>
                 <div className="grid grid-cols-12 px-[5%] xl:px-[15%] py-4">
                     <div className="order-1 col-span-4">
-                        <h1 className="font-bold text-4xl">JerryFox</h1>
+                        <Link href="/" className="font-bold text-4xl">JerryFox</Link>
                     </div>
                     <div
                         className="order-3 lg:order-2 col-span-1 lg:col-span-4">

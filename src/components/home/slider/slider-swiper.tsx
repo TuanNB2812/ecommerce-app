@@ -2,7 +2,7 @@
 
 import {Swiper, SwiperSlide} from "swiper/react";
 import {Autoplay, Navigation, Pagination} from "swiper/modules";
-import '../../style/components/swipe.css'
+import '../../../style/components/swipe.css'
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -14,7 +14,7 @@ const swiperSlideImage = [
     {src: "/images/swiper-image-3.jpg", alt: "Ảnh 3"}
 ];
 
-export default function HomeSwiper() {
+export default function SliderSwiper() {
     return (
         <Swiper slidesPerView={1}
                 loop={true}
