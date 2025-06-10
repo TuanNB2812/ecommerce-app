@@ -85,11 +85,12 @@ export default function CategorySwiper() {
             spaceBetween={DEFAULT_SPACE_BETWEEN}
             navigation={true}
             modules={[Grid, Navigation]}
+            className="category-swiper"
         >
             {swiperSlideImage.map(({href, alt, src}, index) => (
                 <SwiperSlide key={index}>
                     <Link href={href}>
-                        <div className="min-h-[15vh] border border-primary border-2 bg-primary-pastel rounded-2xl flex flex-col items-center justify-center">
+                        <div className="min-h-[15vh] border border-primary border-1 bg-primary-pastel rounded-lg flex flex-col items-center justify-center">
                             <div className="relative w-[80px] h-[80px]">
                                 <Image
                                     className="object-cover rounded-full"
