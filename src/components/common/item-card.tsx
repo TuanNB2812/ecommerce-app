@@ -41,7 +41,7 @@ export default function ItemCard({item, onExpire}: ItemCardProps) {
                 </div>
                 <div className="ml-4 pb-4">
                     <h3 className="text-xl font-semibold mt-3">{item.name}</h3>
-                    <div className="flex items-center gap-2 mt-6">
+                    <div className="flex flex-wrap items-center gap-2 mt-6">
                         {item.discountPrice ? (
                             <>
                                 <span className="text-sm text-muted-foreground line-through">{formatCurrencyVND(item.price)}</span>
