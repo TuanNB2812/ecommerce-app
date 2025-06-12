@@ -5,7 +5,7 @@ import "../style/layout/header-layout.css";
 
 export default function Header() {
     return (
-        <div className="w-full text-white">
+        <div className="w-full text-white sticky top-0 z-2">
             <div className="bg-third">
                 <div className="flex justify-center items-center py-3">
                 <span className="text-sm sm:text-base">
@@ -26,7 +26,7 @@ export default function Header() {
                         <HeaderNavigationMenu></HeaderNavigationMenu>
                     </div>
                     <div className="order-2 lg:order-3 col-span-7 lg:col-span-4 flex justify-end">
-                        <div className="w-3/4 sm:w-2/3 md:w-1/2 lg:w-2/3 mr-2 lg:mr-0">
+                        <div className="w-[80%] mr-2 lg:mr-0">
                             <HeaderInput></HeaderInput>
                         </div>
                     </div>

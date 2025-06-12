@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/grid';
 import Image from "next/image";
 import {useEffect, useState} from "react";
-import {CategorySkeleton} from "@/components/skeleton/category-skeleton";
+import {CommonSkeleton} from "@/components/skeleton/common-skeleton";
 import Link from "next/link";
 
 const BREAKPOINTS = [
@@ -51,7 +51,8 @@ const swiperSlideImage = [
 ];
 
 export default function CategorySwiper() {
-    const [itemNumber, setItemNumber] = useState<number | null>(null);
+    const [itemNumber, setItemNumber] = useState(3);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const updateItems = () => {
@@ -71,23 +72,26 @@ export default function CategorySwiper() {
         return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    if (itemNumber === null) {
-        return <CategorySkeleton rowNumber={DEFAULT_ROW_NUMBER} spaceBetween={DEFAULT_SPACE_BETWEEN}/>;
+    useEffect(() => {
+        if (itemNumber) {
+            setIsLoading(false);
+        }
+    }, [itemNumber]);
+
+    if (isLoading) {
+        return <CommonSkeleton rowNumber={DEFAULT_ROW_NUMBER} spaceBetween={DEFAULT_SPACE_BETWEEN} height="15vh" rounded="rounded-lg"/>;
     }
 
     return (
         <Swiper
             slidesPerView={itemNumber}
-            grid={{
-                rows: DEFAULT_ROW_NUMBER,
-                fill: "row"
-            }}
+            grid={{ rows: DEFAULT_ROW_NUMBER, fill: "row" }}
             spaceBetween={DEFAULT_SPACE_BETWEEN}
             navigation={true}
             modules={[Grid, Navigation]}
             className="category-swiper"
         >
-            {swiperSlideImage.map(({href, alt, src}, index) => (
+            {swiperSlideImage.map(({ href, alt, src }, index) => (
                 <SwiperSlide key={index}>
                     <Link href={href}>
                         <div className="min-h-[15vh] border border-primary border-1 bg-primary-pastel rounded-lg flex flex-col items-center justify-center">
@@ -97,11 +101,11 @@ export default function CategorySwiper() {
                                     src={src}
                                     alt={alt}
                                     fill
-                                    priority={index < 20}
+                                    sizes="(max-width: 1280) 50vw, 75vw"
                                 />
                             </div>
                             <div className="mt-2 text-sm">
-                                { alt }
+                                {alt}
                             </div>
                         </div>
                     </Link>

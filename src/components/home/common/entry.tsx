@@ -42,7 +42,7 @@ export default function Entry({
                             quality={100}
                         />
                     )}
-                    <span className="text-3xl text-muted-foreground mt-1">{leftHeaderTitle}</span>
+                    <span className="text-3xl text-primary mt-1">{leftHeaderTitle}</span>
                 </div>
                 <div>
                     {(rightHeaderTitle || iconRightHeader) && (

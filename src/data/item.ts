@@ -3,5 +3,6 @@ interface Item {
     imageSrc: string;
     name: string;
     price: number;
-    discountPrice: number;
+    discountPrice?: number;
+    countDownEndTime?: string;
 }

@@ -12,3 +12,13 @@ export function formatCurrencyVND(amount: number): string {
     minimumFractionDigits: 0,
   }).format(amount);
 }
+
+export function formatTime(time: number): string {
+  if (time !== null && time !== undefined && time < 10 && time >= 0) {
+    return "0" + time.toString();
+  } else if (time !== null && time !== undefined && time >= 10) {
+    return time.toString();
+  }
+
+  return "";
+}

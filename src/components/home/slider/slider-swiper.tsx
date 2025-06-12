@@ -29,13 +29,14 @@ export default function SliderSwiper() {
         >
             {swiperSlideImage.map(({src, alt}, index) => (
                 <SwiperSlide>
-                    <div className="relative min-h-[60vh]">
+                    <div className="relative min-h-[40vh] md:min-h-[50vh] xl:min-h-[60vh]">
                         <Image
                             className="object-cover"
                             src={src}
                             alt={alt}
                             fill
                             priority={index === 0}
+                            sizes="(max-width: 1280) 50vw, 75vw"
                             quality={100}
                         />
                     </div>
